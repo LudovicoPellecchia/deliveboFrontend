@@ -81,11 +81,12 @@ export default {
 }
 
 .hero-img{
-    width: 200px;
+    width: 318px;
 
     img{
         width: 100%;
         filter: drop-shadow(0 0 0.3rem rgb(0, 0, 0));
+        margin-top: -80px
     }
 }
 

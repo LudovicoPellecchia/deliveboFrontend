@@ -24,9 +24,11 @@ export default {
 
 <style lang="scss">
 .imgbg img {
+  object-fit: contain;
+  top: -77px;
   min-width: 375px;
   width: 100%;
-  max-width: 900px;
+  max-width: 709px;
   height: 100vh;
   position: absolute;
   right: 0;
