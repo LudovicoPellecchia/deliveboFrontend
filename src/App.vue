@@ -1,5 +1,5 @@
 <script>
-import Navbar from './components/Navbar.vue'
+import Navbar from './components/Navbar.vue';
 
 export default {
   components: {
@@ -16,24 +16,34 @@ export default {
 
 <template>
   <div class="imgbg">
-    <img src="./assets/tableProva2.png" alt="">
+    <img class="table-img" src="./assets/tableProva5.png" alt="">
   </div>
   <Navbar></Navbar>
   <router-view></router-view>
 </template>
 
 <style lang="scss">
-.imgbg img {
+.imgbg .table-img {
   object-fit: contain;
-  top: -77px;
-  min-width: 375px;
-  width: 100%;
-  max-width: 709px;
-  height: 100vh;
+  min-width: 730px;
+  width: 50%;
+  max-width: 1035px;
   position: absolute;
   right: 0;
   z-index: -2;
   filter: drop-shadow(0 0 0.3rem rgb(0, 0, 0));
 
+}
+
+
+
+
+@media screen and (max-width: 992px) {
+  .imgbg .table-img {
+    max-width: 460px;
+    width: 100%;
+    min-width: 375px;
+
+  }
 }
 </style>

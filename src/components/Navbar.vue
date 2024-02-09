@@ -61,10 +61,9 @@ export default {
 
         .logo-title {
             font-size: 36px;
-            font-weight: 600;
+            font-weight: 100;
             font-family: 'Borel', cursive;
             transform: translateY(30%);
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
         }
     }
@@ -100,9 +99,23 @@ export default {
     }
 }
 
-/* @media screen and (max-width: 1540px) and (min-width: 1226px) {
-    .pages-links a:last-child{
+@media screen and (max-width: 1526px) {
+    .pages-links a:nth-child(3){
         color: white;
     }
-} */
+}
+@media screen and (max-width: 1195px) {
+    .pages-links a:nth-child(2){
+        color: white;
+    }
+}
+@media screen and (max-width: 1060px) {
+    .pages-links a:nth-child(1){
+        color: white;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+}
 </style>

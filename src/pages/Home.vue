@@ -31,8 +31,9 @@ export default {
             </div>
             <div class="col-6">
                 <div class="hero-img">
-                    <img src="../assets/ramenPlate.png" alt="">
-                </div>
+                    <img class="ramen-img" src="../assets/ramenPlate.png" alt="">
+<!--                     <img class="cipollotto-img" src="../assets/cipollotto1.png" alt="">
+ -->                </div>
             </div>
         </div>
     </div>
@@ -40,11 +41,11 @@ export default {
 
 <style lang="scss" scoped>
 .container{
-    margin-top: 70px;
+    margin-top: 90px;
 }
 .heading-style {
 
-    font-size: 64px;
+    font-size: var(--f-heading-size);
     font-weight: 500;
 
     span {
@@ -81,12 +82,19 @@ export default {
 }
 
 .hero-img{
-    width: 318px;
+    max-width: 400px;
+    width: 100%;
 
     img{
         width: 100%;
         filter: drop-shadow(0 0 0.3rem rgb(0, 0, 0));
         margin-top: -80px
+    }
+
+    .cipollotto-img{
+        position: absolute;
+        max-width: 140px;
+        right: 0;
     }
 }
 
