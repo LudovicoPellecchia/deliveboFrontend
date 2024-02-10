@@ -79,6 +79,7 @@ export default {
 
 
         img {
+            transform: translateY(-50px);
             position: absolute;
             z-index: -2;
             max-width: 440px;
@@ -88,7 +89,7 @@ export default {
 }
 
 .categories-wrapper {
-    padding-top: 100px;
+    padding-top: 70px;
 
     h5 {
         font-weight: 500;

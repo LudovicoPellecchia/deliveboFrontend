@@ -99,7 +99,7 @@ export default {
     }
 }
 
-@media screen and (max-width: 1526px) {
+/* @media screen and (max-width: 1526px) {
     .pages-links a:nth-child(3){
         color: white;
     }
@@ -113,9 +113,5 @@ export default {
     .pages-links a:nth-child(1){
         color: white;
     }
-}
-
-@media screen and (max-width: 992px) {
-
-}
+} */
 </style>
