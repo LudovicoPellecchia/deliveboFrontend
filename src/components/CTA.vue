@@ -18,7 +18,7 @@ export default {
         <div class="container">
             <div class="row justify-content-center">
 
-                <div class="col-12 col-lg-6">
+                <div class="col-10 col-lg-6">
                     <div class="cta-card">
                         <div class="card-wrapper">
                             <img src="../assets/man-chef-cooking-asian-chicken-cafe-kitchen.jpg" alt="">
@@ -51,21 +51,21 @@ export default {
     background-color: var(--clr-bg-body);
 }
 
-.cta-card{
+.cta-card {
     height: 100%;
 
-    .card-wrapper{
+    .card-wrapper {
         height: 100%;
     }
 
-    img{
+    img {
         height: 100%;
         object-fit: cover;
         width: 100%;
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    border-radius: 35px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        border-radius: 35px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 }
 
@@ -78,13 +78,13 @@ export default {
     justify-content: center;
     padding: 50px;
     align-items: center
-
 }
 
-.btn-wrapper{
+.btn-wrapper {
     text-align: center;
 }
-.my-btn{
+
+.my-btn {
     display: inline-block;
     border: 3px solid black;
 }
