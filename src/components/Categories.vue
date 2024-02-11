@@ -27,31 +27,37 @@ export default {
                         <div class="col">
                             <div class="my-card">
                                 <img src="../assets/categories/iStock-1171008705.jpg" alt="">
+                                <div class="card-title">Pizza</div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="my-card">
                                 <img src="../assets/categories/iStock-1302436326.jpg" alt="">
+                                <div class="card-title">Hamburger</div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="my-card">
                                 <img src="../assets/categories/iStock-1616721452.jpg" alt="">
+                                <div class="card-title">Giapponese</div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="my-card">
                                 <img src="../assets/categories/iStock-162244500.jpg" alt="">
+                                <div class="card-title">Indiano</div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="my-card">
                                 <img src="../assets/categories/iStock-542331706.jpg" alt="">
+                                <div class="card-title">Messicano</div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="my-card">
                                 <img src="../assets/categories/iStock-1171008705.jpg" alt="">
+                                <div class="card-title">Cinese</div>
                             </div>
                         </div>
                     </div>
@@ -89,7 +95,7 @@ export default {
 }
 
 .categories-wrapper {
-    padding-top: 70px;
+    padding-top: var(--section-spacing);
 
     h5 {
         font-weight: 500;
@@ -99,12 +105,47 @@ export default {
         position: relative;
         margin: 0 100px;
 
-        h5{
+        h5 {
             margin-bottom: 2rem;
+        }
+
+        .my-card {
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.4s;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+
+            &::after {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                background-color: rgba(0, 0, 0, 0.45);
+                top: 0;
+                z-index: 0;
+                transition: background-color 0.4s;
+            }
+
+            &:hover::after {
+                background-color: rgba(0, 0, 0, 0.08);
+            }
+
+            .card-title {
+                z-index: 1;
+                font-size: 1.6rem;
+                color: white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
         }
     }
 
-    .arrows i{
+    .arrows i {
         position: absolute;
         font-size: 1.6rem;
         color: var(--clr-primary);
@@ -113,14 +154,14 @@ export default {
     .arrows i:nth-child(1) {
         left: -30px;
         top: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, 50%);
 
     }
 
     .arrows i:nth-child(2) {
         right: -30px;
         top: 50%;
-        transform: translate(50%, -50%);
+        transform: translate(50%, 50%);
 
 
     }

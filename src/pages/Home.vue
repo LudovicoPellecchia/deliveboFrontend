@@ -1,11 +1,15 @@
 <script>
 import HeroSection from '../components/HeroSection.vue';
-import Categories from '../components/Categories.vue'
+import Categories from '../components/Categories.vue';
+import Offers from '../components/Offers.vue';
+import CTA from '../components/CTA.vue'
 
 export default {
     components: {
         HeroSection,
-        Categories
+        Categories,
+        Offers,
+        CTA
     },
     data() {
         return {}
@@ -19,6 +23,8 @@ export default {
 <template>
 <HeroSection></HeroSection>
 <Categories></Categories>
+<Offers></Offers>
+<CTA></CTA>
 </template>
 
 <style lang="scss" scoped>

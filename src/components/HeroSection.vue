@@ -65,16 +65,9 @@ export default {
 
 
 .my-btn {
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-    padding: 15px 10px;
     color: #E98E01;
     border: 3px solid #E98E01;
-    border-radius: 47px;
-    transition: all 0.3s;
+
 
 
     &:hover {
