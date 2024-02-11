@@ -53,7 +53,7 @@ export default {
         }
 
         .parsley-bg {
-            filter:drop-shadow(0 0 0.2rem rgba(0, 0, 0, 0.4));
+            filter: drop-shadow(0 0 0.2rem rgba(0, 0, 0, 0.4));
             width: 100%;
             max-width: 200px;
             position: absolute;
@@ -69,14 +69,15 @@ export default {
     }
 
     .offers-wrapper {
+        text-align: center;
         display: flex;
+        gap: 20px;
         flex-direction: column;
         align-items: center;
         justify-content: center;
 
         h4 {
             font-size: 40px;
-            padding: 40px 0;
         }
 
         span {
@@ -91,7 +92,7 @@ export default {
             color: black;
             border: 3px solid #333333;
 
-            &:hover{
+            &:hover {
                 background-color: #333333;
                 color: var(--clr-bg-body);
             }

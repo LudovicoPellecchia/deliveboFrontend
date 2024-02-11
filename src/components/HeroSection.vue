@@ -16,7 +16,7 @@ export default {
 <template>
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-12 col-lg-6">
                 <h1 class="heading-style">Discover a <span>world</span> of <span>delicious</span> food options! </h1>
                 <div class="row align-items-end pt-4">
                     <div class="col-7">
@@ -30,11 +30,10 @@ export default {
                 </div>
 
             </div>
-            <div class="col-6 d-flex justify-content-center">
-                <div class="hero-img">
+            <div class="col-12 col-lg-6 d-flex justify-content-center">
+                <div class="hero-img d-sm-none d-lg-block">
                     <img class="ramen-img" src="../assets/ramenPlate.png" alt="">
-                    <!--                     <img class="cipollotto-img" src="../assets/cipollotto1.png" alt="">
- -->
+
                 </div>
             </div>
         </div>
@@ -48,7 +47,7 @@ export default {
 
 .heading-style {
 
-    font-size: var(--f-heading-size);
+    font-size: clamp(40px, 8vw, var(--f-heading-size));
     font-weight: 500;
 
     span {

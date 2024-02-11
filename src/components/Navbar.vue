@@ -25,7 +25,7 @@ export default {
                 <router-link to="/">Ristoranti</router-link>
                 <router-link to="/">Contatti</router-link>
             </div>
-            <div class="my-nav-links">
+            <div class="my-nav-links d-sm-none d-lg-block">
                 <div class="my-nav-link">
                     <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>

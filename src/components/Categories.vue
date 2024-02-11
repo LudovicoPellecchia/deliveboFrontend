@@ -20,53 +20,58 @@ export default {
         </div>
         <div class="categories-wrapper">
             <div class="container">
-                <div class="card-list">
-                    <h5>Start your search! What do you feel like today?</h5>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-xl-10">
+                        <div class="card-list">
+                            <h5>Start your search! What do you feel like today?</h5>
 
-                    <div class="row row-cols-3 gy-3">
-                        <div class="col">
-                            <div class="my-card">
-                                <img src="../assets/categories/iStock-1171008705.jpg" alt="">
-                                <div class="card-title">Pizza</div>
+                            <div class="row row-cols-3 gy-3">
+                                <div class="col">
+                                    <div class="my-card">
+                                        <img src="../assets/categories/iStock-1171008705.jpg" alt="">
+                                        <div class="card-title">Pizza</div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="my-card">
+                                        <img src="../assets/categories/iStock-1302436326.jpg" alt="">
+                                        <div class="card-title">Hamburger</div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="my-card">
+                                        <img src="../assets/categories/iStock-1616721452.jpg" alt="">
+                                        <div class="card-title">Giapponese</div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="my-card">
+                                        <img src="../assets/categories/iStock-162244500.jpg" alt="">
+                                        <div class="card-title">Indiano</div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="my-card">
+                                        <img src="../assets/categories/iStock-542331706.jpg" alt="">
+                                        <div class="card-title">Messicano</div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="my-card">
+                                        <img src="../assets/categories/iStock-1171008705.jpg" alt="">
+                                        <div class="card-title">Cinese</div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="my-card">
-                                <img src="../assets/categories/iStock-1302436326.jpg" alt="">
-                                <div class="card-title">Hamburger</div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="my-card">
-                                <img src="../assets/categories/iStock-1616721452.jpg" alt="">
-                                <div class="card-title">Giapponese</div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="my-card">
-                                <img src="../assets/categories/iStock-162244500.jpg" alt="">
-                                <div class="card-title">Indiano</div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="my-card">
-                                <img src="../assets/categories/iStock-542331706.jpg" alt="">
-                                <div class="card-title">Messicano</div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="my-card">
-                                <img src="../assets/categories/iStock-1171008705.jpg" alt="">
-                                <div class="card-title">Cinese</div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="arrows">
-                        <i class="fa-solid fa-chevron-left"></i>
-                        <i class="fa-solid fa-chevron-right"></i>
+                            <div class="arrows">
+                                <i class="fa-solid fa-chevron-left"></i>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
 
 
 
@@ -103,8 +108,8 @@ export default {
 
     .card-list {
         position: relative;
-        margin: 0 100px;
-
+/*         margin: 0 100px;
+ */
         h5 {
             margin-bottom: 2rem;
         }

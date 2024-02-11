@@ -2,14 +2,16 @@
 import HeroSection from '../components/HeroSection.vue';
 import Categories from '../components/Categories.vue';
 import Offers from '../components/Offers.vue';
-import CTA from '../components/CTA.vue'
+import CTA from '../components/CTA.vue';
+import Footer from '../components/Footer.vue';
 
 export default {
     components: {
         HeroSection,
         Categories,
         Offers,
-        CTA
+        CTA,
+        Footer
     },
     data() {
         return {}
@@ -25,6 +27,7 @@ export default {
 <Categories></Categories>
 <Offers></Offers>
 <CTA></CTA>
+<Footer></Footer>
 </template>
 
 <style lang="scss" scoped>
