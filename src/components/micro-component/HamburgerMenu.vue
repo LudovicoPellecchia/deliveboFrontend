@@ -34,7 +34,7 @@ export default {
 
     div {
         padding: 10px;
-        width: 35px;
+        width: 30px;
         height: 30px;
         position: relative;
     }
@@ -53,11 +53,11 @@ export default {
     }
 
     .line-1 {
-        transform: translate(-50%, -15px);
+        transform: translate(-50%, -10px);
     }
 
     .line-2 {
-        transform: translate(-50%, 10px);
+        transform: translate(-50%, 6px);
     }
 
     

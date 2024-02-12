@@ -42,7 +42,7 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-    margin-top: 90px;
+    margin-top: 60px;
 }
 
 .heading-style {
@@ -92,4 +92,15 @@ export default {
         right: 0;
     }
 }
+
+
+@media screen and (min-width: 990px) {
+
+    .container {
+    margin-top: 90px;
+}
+    
+}
+
+
 </style>

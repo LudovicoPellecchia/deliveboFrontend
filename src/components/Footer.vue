@@ -20,7 +20,7 @@ export default {
                 <img src="../assets/logo.png " alt="">
                 <div class="logo-title">Delichoose</div>
             </div>
-            <div class="row row-cols-3">
+            <div class="row row-cols-1 row-cols-md-3">
                 <div class="col">
                     <div class="footer-section">
                         <div class="footer-contacts">
