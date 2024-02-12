@@ -108,7 +108,8 @@ export default {
 
     .card-list {
         position: relative;
-/*         margin: 0 100px;
+
+        /*         margin: 0 100px;
  */
         h5 {
             margin-bottom: 2rem;
@@ -140,7 +141,7 @@ export default {
 
             .card-title {
                 z-index: 1;
-                font-size: 1.6rem;
+                font-size: clamp(1.1rem, 2vw, 1.6rem);
                 color: white;
                 position: absolute;
                 top: 50%;
@@ -152,12 +153,13 @@ export default {
 
     .arrows i {
         position: absolute;
-        font-size:clamp(1rem, 2vw, 1.6rem) ;
+        font-size: clamp(1rem, 2vw, 1.6rem);
         color: var(--clr-primary);
     }
 
     .arrows i:nth-child(1) {
-        left: -15px;        top: 50%;
+        left: -15px;
+        top: 50%;
         transform: translate(-50%, 50%);
 
     }
@@ -179,5 +181,4 @@ export default {
         right: -30px;
 
     }
-}
-</style>
+}</style>
