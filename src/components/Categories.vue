@@ -152,22 +152,31 @@ export default {
 
     .arrows i {
         position: absolute;
-        font-size: 1.6rem;
+        font-size:clamp(1rem, 2vw, 1.6rem) ;
         color: var(--clr-primary);
     }
 
     .arrows i:nth-child(1) {
-        left: -30px;
-        top: 50%;
+        left: -15px;        top: 50%;
         transform: translate(-50%, 50%);
 
     }
 
     .arrows i:nth-child(2) {
-        right: -30px;
+        right: -15px;
         top: 50%;
         transform: translate(50%, 50%);
+    }
+}
 
+@media screen and (min-width: 1050px) {
+
+    .arrows i:nth-child(1) {
+        left: -30px;
+    }
+
+    .arrows i:nth-child(2) {
+        right: -30px;
 
     }
 }

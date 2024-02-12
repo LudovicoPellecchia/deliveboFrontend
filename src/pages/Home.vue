@@ -11,7 +11,7 @@ export default {
         Categories,
         Offers,
         CTA,
-        Footer
+        Footer,
     },
     data() {
         return {}

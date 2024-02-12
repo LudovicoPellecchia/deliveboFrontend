@@ -25,7 +25,7 @@ export default {
 <style lang="scss">
 .imgbg .table-img {
   object-fit: contain;
-  min-width: 730px;
+  min-width: 700px;
   width: 50%;
   max-width: 1035px;
   position: absolute;
@@ -46,4 +46,5 @@ export default {
 
   }
 }
+
 </style>

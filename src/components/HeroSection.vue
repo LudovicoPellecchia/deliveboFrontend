@@ -31,7 +31,7 @@ export default {
 
             </div>
             <div class="col-12 col-lg-6 d-flex justify-content-center">
-                <div class="hero-img d-sm-none d-lg-block">
+                <div class="hero-img d-none d-lg-block">
                     <img class="ramen-img" src="../assets/ramenPlate.png" alt="">
 
                 </div>

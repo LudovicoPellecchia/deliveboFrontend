@@ -54,6 +54,9 @@ export default {
 
                                 <div><a href="#">Payment Methods</a></div>
                                 <div><a href="#">F.A.Q</a></div>
+                                <div><a href="#">Contacts</a></div>
+                                <div><a href="#">Careers</a></div>
+                                <div><a href="#">Features</a></div>
                             </div>
                         </div>
 
@@ -67,6 +70,7 @@ export default {
                                 Info Links
                             </div>
                             <div class="footer-info">
+                                <div><a href="#">Terms & Conditions</a></div>
                                 <div><a href="#">Privacy Policies</a></div>
                                 <div><a href="#">Cookie Policies</a></div>
                             </div>
@@ -109,7 +113,7 @@ footer {
         text-decoration: none;
 
         >*{
-            padding-bottom: 0.3rem;
+            padding-bottom: 0.8rem;
         }
 
 
