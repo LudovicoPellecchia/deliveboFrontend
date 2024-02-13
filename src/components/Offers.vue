@@ -25,8 +25,8 @@ export default {
                     <div class="offers-wrapper">
                         <h4>Try our discounts!</h4>
                         <div><span>20%</span> discount for your first 5 orders </div>
-                        <div>Free delivery, coupon, discounts! Join us to get access to new discounts every week. </div>
-                        <div class="my-btn">Scopri di più</div>
+                        <div>Free deliveries, coupons, discounts! Join us to get access to new discounts every week. </div>
+                        <div class="my-btn">View More</div>
                     </div>
                 </div>
             </div>
@@ -75,6 +75,14 @@ export default {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        :nth-child(2){
+            font-size: 1.4rem;
+        }
+
+        :nth-child(3){
+            font-size: 1.1rem;
+        }
 
         h4 {
             font-size: 40px;

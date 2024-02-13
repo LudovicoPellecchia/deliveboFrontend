@@ -18,7 +18,7 @@ export default {
         <div class="container">
             <div class="row justify-content-center">
 
-                <div class="col-10 col-lg-6">
+                <div class="col-12 col-sm-10 col-lg-6">
                     <div class="cta-card">
                         <div class="card-wrapper">
                             <img src="../assets/man-chef-cooking-asian-chicken-cafe-kitchen.jpg" alt="">
@@ -72,6 +72,7 @@ export default {
 
 
 .cta-paragraph {
+    font-size: 1.1rem;
     gap: 20px;
     flex-direction: column;
     display: flex;

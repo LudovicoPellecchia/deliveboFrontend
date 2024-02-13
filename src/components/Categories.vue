@@ -25,7 +25,7 @@ export default {
                         <div class="card-list">
                             <h5>Start your search! What do you feel like today?</h5>
 
-                            <div class="row row-cols-3 gy-3">
+                            <div class="row row-cols-2 row-cols-md-3 gy-3">
                                 <div class="col">
                                     <div class="my-card">
                                         <img src="../assets/categories/iStock-1171008705.jpg" alt="">

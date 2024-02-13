@@ -14,40 +14,60 @@ export default {
 </script>
 
 <template>
-    <div class="container">
+    <div class="container hero-section">
         <div class="row">
-            <div class="col-12 col-lg-6">
-                <h1 class="heading-style">Discover a <span>world</span> of <span>delicious</span> food options! </h1>
-                <div class="row align-items-end pt-4">
-                    <div class="col-7">
-                        <div class="p-style">Search in our catalogs of restaurants the one that matches your taste. <br>
-                            Start
-                            now!</div>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 col-md-8 col-lg-6">
+                        <h1 class="heading-style">Discover a <span>world</span> of <span>delicious</span>
+                            food options!
+                        </h1>
                     </div>
-                    <div class="col-5">
-                        <div class="my-btn">Order</div>
+                    <div class="col-12 col-lg-6 d-flex justify-content-center">
+                        <div class="hero-img d-sm-none d-lg-block">
+                            <img class="ramen-img" src="../assets/ramenPlate.png" alt="">
+                        </div>
                     </div>
                 </div>
 
             </div>
-            <div class="col-12 col-lg-6 d-flex justify-content-center">
-                <div class="hero-img d-none d-lg-block">
-                    <img class="ramen-img" src="../assets/ramenPlate.png" alt="">
 
+            <div class="row">
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-10 col-sm-7">
+                            <div class="p-style">Search in our catalogs of restaurants the one that matches your taste.
+                                <br>
+                                Start
+                                now!
+                            </div>
+                        </div>
+                        <div class="col-8 col-sm-5">
+                            <div class="my-btn">Order</div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
+
+
+
+
         </div>
+
+
+
     </div>
 </template>
 
 <style lang="scss" scoped>
-.container {
+.hero-section {
     margin-top: 60px;
 }
 
 .heading-style {
 
-    font-size: clamp(40px, 8vw, var(--f-heading-size));
+    font-size: clamp(40px, 7vw, var(--f-heading-size));
     font-weight: 500;
 
     span {
@@ -93,14 +113,41 @@ export default {
     }
 }
 
+@media screen and (max-width: 576px) {
+
+    .hero-img {
+        margin-top: 20px;
+
+        max-width: 150px;
+
+        img {
+            margin-top: 0;
+            filter: drop-shadow(0 4px 0.3rem rgba(0, 0, 0, 0.5));
+
+        }
+    }
+
+    .hero-section {
+        padding: 0 40px;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .hero-paragraphs {
+        justify-content: center;
+        gap: 1.7rem;
+
+    }
+
+
+
+}
 
 @media screen and (min-width: 990px) {
 
-    .container {
-    margin-top: 90px;
-}
-    
-}
+    .hero-section {
+        margin-top: 90px;
+    }
 
-
+}
 </style>

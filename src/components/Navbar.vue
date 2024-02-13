@@ -44,8 +44,8 @@ export default {
                     <a href="">Login</a>
                 </div>
                 <div class="hamburger-menu d-block d-md-none ">
-                <HamburgerMenu></HamburgerMenu>
-            </div>
+                    <HamburgerMenu></HamburgerMenu>
+                </div>
             </div>
 
         </div>
@@ -54,7 +54,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.imgbg{
+.imgbg {
     object-fit: contain;
     max-width: 100%;
     width: 50%;
@@ -70,8 +70,9 @@ export default {
     padding: 20px;
     display: flex;
     align-items: center;
-/*     gap: 100px;
- */    font-size: 20px;
+    /*     gap: 100px;
+ */
+    font-size: 20px;
 
     .hamburger-menu {
         margin-left: auto;
@@ -101,7 +102,7 @@ export default {
         }
     }
 
-    .pages-links{
+    .pages-links {
         flex-grow: 1;
         text-align: center;
 
@@ -124,7 +125,8 @@ export default {
         display: flex;
         flex-grow: 0;
         margin-left: auto;
-/*         padding-right: 50px;
+
+        /*         padding-right: 50px;
  */
         .my-nav-link {
 
@@ -132,7 +134,7 @@ export default {
             display: inline-block;
             font-weight: 200;
 
-            .cart-icon{
+            .cart-icon {
                 color: var(--clr-bg-body);
 
             }
@@ -166,16 +168,41 @@ export default {
 
 
 
+@media screen and (max-width: 576px) {
+
+    .my-nav .logo .logo-title{
+        display: block;
+        font-size: 1.23rem;
+    }
+
+    .imgbg {
+        min-width: 120px;
+        max-width: 125px;
+        filter: drop-shadow(0 0 0.2rem rgba(0, 0, 0, 0.8));
+
+
+        img {
+            object-fit: none;
+            border-bottom-left-radius: 40px;
+
+        }
+    }
+
+}
+
 
 @media screen and (min-width: 576px) {
-    .my-nav .logo .logo-title{
+    .my-nav .logo .logo-title {
         display: block;
     }
 
 }
+
 @media screen and (min-width: 768px) {
 
-    .my-nav .pages-links a{
+
+
+    .my-nav .pages-links a {
         margin-right: 10px
     }
 
@@ -186,10 +213,11 @@ export default {
 }
 
 @media screen and (min-width: 992px) {
-    .my-nav .pages-links a{
+    .my-nav .pages-links a {
         margin-right: 20px
     }
-    .imgbg{
+
+    .imgbg {
         width: 56%;
 
     }
@@ -200,22 +228,24 @@ export default {
     }
 
 }
+
 @media screen and (min-width: 1200px) {
 
-    .my-nav .pages-links{
+    .my-nav .pages-links {
         text-align: start;
         padding-left: 30px;
 
-        *{
+        * {
             color: black;
         }
-        a:nth-child(3){
+
+        a:nth-child(3) {
             color: white;
         }
 
     }
 
-    .imgbg{
+    .imgbg {
         max-width: 1010px;
         width: 56%;
 
@@ -228,7 +258,7 @@ export default {
 }
 
 @media screen and (min-width: 1300px) {
-    .imgbg{
+    .imgbg {
         max-width: 1010px;
         width: 50%;
     }
@@ -236,5 +266,4 @@ export default {
     .my-nav .pages-links a:nth-child(3) {
         color: black;
     }
-}
-</style>
+}</style>
