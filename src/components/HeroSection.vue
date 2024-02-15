@@ -16,49 +16,36 @@ export default {
 <template>
     <div class="container hero-section">
         <div class="row">
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-12 col-md-8 col-lg-6">
-                        <h1 class="heading-style">Discover a <span>world</span> of <span>delicious</span>
-                            food options!
-                        </h1>
+            <div class="col-12 col-lg-6">
+                <div class="col-12 col-md-8 col-lg-12 ">
+                    <h1 class="heading-style">Discover a <span>world</span> of <span>delicious</span> food options! </h1>
+                </div>
+                <div class="col-12 col-lg-6 d-flex justify-content-center">
+                    <div class="hero-img d-sm-none">
+                        <img class="ramen-img" src="../assets/ramenPlate.png" alt="">
                     </div>
-                    <div class="col-12 col-lg-6 d-flex justify-content-center">
-                        <div class="hero-img d-sm-none d-lg-block">
-                            <img class="ramen-img" src="../assets/ramenPlate.png" alt="">
-                        </div>
+                </div>
+                <div class="row align-items-end pt-4 hero-paragraphs">
+                    <div class="col-10 col-sm-7">
+                        <div class="p-style">Search in our catalogs of restaurants the one that matches your taste. <br>
+                            Start
+                            now!</div>
+                    </div>
+                    <div class="col-7 col-sm-5">
+                        <div class="my-btn">Order</div>
                     </div>
                 </div>
 
             </div>
-
-            <div class="row">
-                <div class="col-6">
-                    <div class="row">
-                        <div class="col-10 col-sm-7">
-                            <div class="p-style">Search in our catalogs of restaurants the one that matches your taste.
-                                <br>
-                                Start
-                                now!
-                            </div>
-                        </div>
-                        <div class="col-8 col-sm-5">
-                            <div class="my-btn">Order</div>
-                        </div>
-                    </div>
+            <div class="col-12 col-lg-6 d-flex justify-content-center">
+                <div class="hero-img d-none d-lg-block">
+                    <img class="ramen-img" src="../assets/ramenPlate.png" alt="">
                 </div>
-
             </div>
-
-
-
-
         </div>
-
-
-
     </div>
 </template>
+
 
 <style lang="scss" scoped>
 .hero-section {
@@ -129,7 +116,7 @@ export default {
 
     .hero-section {
         padding: 0 40px;
-        margin-top: 40px;
+        margin-top: 30px;
         text-align: center;
     }
 
@@ -143,7 +130,19 @@ export default {
 
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 768px) {
+
+    .hero-img{
+        max-width: 430px;
+    }
+
+
+}
+@media screen and (min-width: 992px) {
+
+
+}
+@media screen and (min-width: 1200px) {
 
     .hero-section {
         margin-top: 90px;

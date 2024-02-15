@@ -94,7 +94,7 @@ export default {
 
         .logo-title {
             display: none;
-            font-size: 36px;
+            font-size: clamp(20px, 4vw, 36px);
             font-weight: 100;
             font-family: 'Borel', cursive;
             transform: translateY(30%);
@@ -167,12 +167,10 @@ export default {
 } */
 
 
-
 @media screen and (max-width: 576px) {
 
-    .my-nav .logo .logo-title{
+    .my-nav .logo .logo-title {
         display: block;
-        font-size: 1.23rem;
     }
 
     .imgbg {
@@ -266,4 +264,5 @@ export default {
     .my-nav .pages-links a:nth-child(3) {
         color: black;
     }
-}</style>
+}
+</style>

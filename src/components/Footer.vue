@@ -136,7 +136,7 @@ footer {
 
     .logo-title {
         color: white;
-        font-size: 36px;
+        font-size: clamp(20px, 4vw, 36px);
         font-weight: 100;
         font-family: 'Borel', cursive;
         transform: translateY(30%);

@@ -1,11 +1,14 @@
 <script>
 
 export default {
+
     components: {
 
     },
     data() {
-        return {}
+        return {
+
+        }
     },
     methods: {
 
@@ -22,8 +25,9 @@ export default {
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 col-xl-10">
+                        <h5>Start your search! What do you feel like today?</h5>
+
                         <div class="card-list">
-                            <h5>Start your search! What do you feel like today?</h5>
 
                             <div class="row row-cols-2 row-cols-md-3 gy-3">
                                 <div class="col">
@@ -64,9 +68,14 @@ export default {
                                 </div>
                             </div>
 
-                            <div class="arrows">
+                            <div class="side-arrows d-none d-sm-block">
                                 <i class="fa-solid fa-chevron-left"></i>
                                 <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+
+                            <div class="vertical-arrows d-sm-none">
+                                <i class="fa-solid fa-chevron-up"></i>
+                                <i class="fa-solid fa-chevron-down"></i>
                             </div>
                         </div>
                     </div>
@@ -80,6 +89,7 @@ export default {
             </div>
         </div>
     </section>
+
 </template>
 
 <style lang="scss" scoped>
@@ -104,16 +114,12 @@ export default {
 
     h5 {
         font-weight: 500;
+        margin-bottom: 2rem;
+
     }
 
     .card-list {
         position: relative;
-
-        /*         margin: 0 100px;
- */
-        h5 {
-            margin-bottom: 2rem;
-        }
 
         .my-card {
             position: relative;
@@ -151,20 +157,34 @@ export default {
         }
     }
 
-    .arrows i {
+    .side-arrows i,
+    .vertical-arrows i {
+        cursor: pointer;
         position: absolute;
         font-size: clamp(1rem, 2vw, 1.6rem);
         color: var(--clr-primary);
     }
 
-    .arrows i:nth-child(1) {
+    .vertical-arrows i:nth-child(1) {
+        top: 0;
+        right: 50%;
+        transform: translate(50%);
+
+    }
+
+    .vertical-arrows i:nth-child(2) {
+        right: 50%;
+        transform: translate(50%);
+    }
+
+    .side-arrows i:nth-child(1) {
         left: -15px;
         top: 50%;
         transform: translate(-50%, 50%);
 
     }
 
-    .arrows i:nth-child(2) {
+    .side-arrows i:nth-child(2) {
         right: -15px;
         top: 50%;
         transform: translate(50%, 50%);
@@ -173,12 +193,13 @@ export default {
 
 @media screen and (min-width: 1050px) {
 
-    .arrows i:nth-child(1) {
+    .side-arrows i:nth-child(1) {
         left: -30px;
     }
 
-    .arrows i:nth-child(2) {
+    .side-arrows i:nth-child(2) {
         right: -30px;
 
     }
-}</style>
+}
+</style>
