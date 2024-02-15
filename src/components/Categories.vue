@@ -1,4 +1,11 @@
 <script>
+import Swiper from 'swiper';
+import { Grid, Navigation, Pagination } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/grid';
 
 export default {
 
@@ -7,11 +14,119 @@ export default {
     },
     data() {
         return {
-
+            cards: [
+                {
+                    id: 0,
+                    src: '../src/assets/categories/hamb.jpg',
+                    name: 'Hamburger'
+                },
+                {
+                    id: 1,
+                    src: '../src/assets/categories/mex.jpg',
+                    name: 'Mexican'
+                },
+                {
+                    id: 2,
+                    src: '../src/assets/categories/pizza.jpg',
+                    name: 'Pizza'
+                },
+                {
+                    id: 3,
+                    src: '../src/assets/categories/jap.jpg',
+                    name: 'Japanese'
+                },
+                {
+                    id: 4,
+                    src: '../src/assets/categories/indiano.jpg',
+                    name: 'Indian'
+                },
+                {
+                    id: 5,
+                    src: '../src/assets/categories/cinese.jpg',
+                    name: 'Chinese'
+                },
+                {
+                    id: 6,
+                    src: '../src/assets/categories/mediter.jpg',
+                    name: 'Mediterranean'
+                },
+                {
+                    id: 7,
+                    src: '../src/assets/categories/vegan.jpg',
+                    name: 'Vegan'
+                },
+                {
+                    id: 8,
+                    src: '../src/assets/categories/bakery.png',
+                    name: 'Bakery'
+                },
+                {
+                    id: 9,
+                    src: '../src/assets/categories/italian.jpg',
+                    name: 'Italian'
+                },
+                {
+                    id: 10,
+                    src: '../src/assets/categories/fried.jpg',
+                    name: 'Fried'
+                },
+                {
+                    id: 11,
+                    src: '../src/assets/categories/thai.jpg',
+                    name: 'Thai'
+                },
+            ]
         }
     },
     methods: {
 
+    },
+    mounted() {
+        // Inizializza Swiper qui e passa le funzioni console.log come callback
+        new Swiper('.swiper', {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            modules: [Navigation, Pagination, Grid],
+            grid: {
+                fill: 'row',
+                rows: 2
+            },
+
+            direction: 'horizontal',
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 3,
+                    grid: {
+                        fill: 'row',
+                        rows: 2
+                    },
+                    direction: 'horizontal',
+                },
+                0: {
+                    slidesPerView: 2,
+                    direction: 'horizontal',
+                    grid: {
+                        fill: 'row',
+                        rows: 3
+                    },
+                },
+
+
+            },
+
+            on: {
+                init: (swiper) => console.log(swiper),
+                slideChange: () => console.log('slide change')
+            }
+        });
     },
 }
 </script>
@@ -26,73 +141,42 @@ export default {
                 <div class="row justify-content-center">
                     <div class="col-12 col-xl-10">
                         <h5>Start your search! What do you feel like today?</h5>
+                        <div class="slider">
+                            <div class="swiper card-list">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide " v-for="card in cards" :key="card.id">
+                                        <div class="my-card">
+                                            <img :src="card.src" :alt="card.id">
+                                            <div class="card-title">{{ card.name }}</div>
+                                        </div>
+                                    </div>
 
-                        <div class="card-list">
-
-                            <div class="row row-cols-2 row-cols-md-3 gy-3">
-                                <div class="col">
-                                    <div class="my-card">
-                                        <img src="../assets/categories/iStock-1171008705.jpg" alt="">
-                                        <div class="card-title">Pizza</div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="my-card">
-                                        <img src="../assets/categories/iStock-1302436326.jpg" alt="">
-                                        <div class="card-title">Hamburger</div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="my-card">
-                                        <img src="../assets/categories/iStock-1616721452.jpg" alt="">
-                                        <div class="card-title">Giapponese</div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="my-card">
-                                        <img src="../assets/categories/iStock-162244500.jpg" alt="">
-                                        <div class="card-title">Indiano</div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="my-card">
-                                        <img src="../assets/categories/iStock-542331706.jpg" alt="">
-                                        <div class="card-title">Messicano</div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="my-card">
-                                        <img src="../assets/categories/iStock-1171008705.jpg" alt="">
-                                        <div class="card-title">Cinese</div>
-                                    </div>
                                 </div>
                             </div>
-
-                            <div class="side-arrows d-none d-sm-block">
-                                <i class="fa-solid fa-chevron-left"></i>
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </div>
-
-                            <div class="vertical-arrows d-sm-none">
-                                <i class="fa-solid fa-chevron-up"></i>
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
                         </div>
+
+
+
                     </div>
                 </div>
-
-
-
-
-
-
             </div>
+
+
+
+
+
+
         </div>
     </section>
-
 </template>
 
 <style lang="scss" scoped>
+.slider {
+    position: relative;
+}
+
 .categories-section {
     position: relative;
 
@@ -122,12 +206,19 @@ export default {
         position: relative;
 
         .my-card {
+            aspect-ratio: 16/9;
             position: relative;
             cursor: pointer;
             transition: transform 0.4s;
 
             &:hover {
                 transform: scale(1.02);
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
 
             &::after {
@@ -157,49 +248,26 @@ export default {
         }
     }
 
-    .side-arrows i,
-    .vertical-arrows i {
-        cursor: pointer;
-        position: absolute;
-        font-size: clamp(1rem, 2vw, 1.6rem);
-        color: var(--clr-primary);
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        &::after {
+            font-size: clamp(1rem, 4vw, 1.6rem);
+            color: #E98E01;
+
+        }
     }
 
-    .vertical-arrows i:nth-child(1) {
-        top: 0;
-        right: 50%;
-        transform: translate(50%);
-
-    }
-
-    .vertical-arrows i:nth-child(2) {
-        right: 50%;
-        transform: translate(50%);
-    }
-
-    .side-arrows i:nth-child(1) {
-        left: -15px;
-        top: 50%;
-        transform: translate(-50%, 50%);
+    .swiper-button-prev {
+        left: auto;
+        right: 100%;
 
     }
 
-    .side-arrows i:nth-child(2) {
-        right: -15px;
-        top: 50%;
-        transform: translate(50%, 50%);
-    }
-}
-
-@media screen and (min-width: 1050px) {
-
-    .side-arrows i:nth-child(1) {
-        left: -30px;
+    .swiper-button-next {
+        left: 100%;
     }
 
-    .side-arrows i:nth-child(2) {
-        right: -30px;
 
-    }
 }
 </style>
