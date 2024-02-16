@@ -5,20 +5,53 @@ export default {
 
     },
     data() {
-        return {}
+        return {
+            observer: null,
+            isVisible: null
+        }
     },
     methods: {
+        onIntersect(entries) {
+            // per ogni elemento osservato
+            entries.forEach((entry) => {
+                // se è intersecato
+                if (entry.isIntersecting) {
+                    // imposta isVisible a true
+                    this.isVisible = true;
+                } else {
+                    // altrimenti imposta isVisible a false
+                    this.isVisible = false;
+                }
+            });
+        },
+    },
 
+    mounted() {
+        this.observer = new IntersectionObserver(this.onIntersect, {
+            root: null, // il viewport
+            threshold: 0.5, // percentuale di visibilità richiesta
+            rootMargin: "100px", // margine aggiuntivo dal bordo del viewport
+        });
+        this.observer.observe(this.$refs.titleRef); // osserva il titolo
+        this.observer.observe(this.$refs.heroBtn); // osserva il titolo
+        this.observer.observe(this.$refs.heroPar); // osserva il titolo
+    },
+    beforeDestroy() {
+        this.observer.disconnect(); // disconnetti l'observer
     },
 }
 </script>
 
 <template>
-    <div class="container hero-section">
+    <div class="container hero-section " >
         <div class="row">
             <div class="col-12 col-lg-6">
                 <div class="col-12 col-md-8 col-lg-12 ">
-                    <h1 class="heading-style">Discover a <span>world</span> of <span>delicious</span> food options! </h1>
+                    <h1 ref="titleRef" 
+                    :class="{ 'fade-in': isVisible, 'slide-up': isVisible }" 
+                    class="heading-style">
+                        Discover a <span>world</span> of <span>delicious</span> food options!
+                    </h1>
                 </div>
                 <div class="col-12 col-lg-6 d-flex justify-content-center">
                     <div class="hero-img d-sm-none">
@@ -27,12 +60,14 @@ export default {
                 </div>
                 <div class="row align-items-end pt-4 hero-paragraphs">
                     <div class="col-10 col-sm-7">
-                        <div class="p-style">Search in our catalogs of restaurants the one that matches your taste. <br>
+                        <div ref="heroPar" 
+                        :class="{ 'fade-in-p': isVisible }" 
+                        class="p-style">Search in our catalogs of restaurants the one that matches your taste. <br>
                             Start
                             now!</div>
                     </div>
                     <div class="col-7 col-sm-5">
-                        <div class="my-btn">Order</div>
+                        <div  :class="{ 'fade-in-btn': isVisible }"  ref="heroBtn" class="my-btn">Order</div>
                     </div>
                 </div>
 
@@ -52,8 +87,34 @@ export default {
     margin-top: 60px;
 }
 
-.heading-style {
+.fade-in {
+    filter: blur(0px) !important; /* Aggiungi sfocatura quando l'elemento diventa visibile */
 
+    opacity: 1 !important;
+    /* diventa visibile */
+    transition: opacity 0.6s ease !important;
+    /* con una transizione di 1 secondo */
+}
+.fade-in-p {
+    filter: blur(0px) !important; /* Aggiungi sfocatura quando l'elemento diventa visibile */
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+    /* diventa visibile */
+    transition: opacity 0.6s ease 0.2s, transform 1s ease 0.2s, filter 1s ease 0.2s !important;
+    /* con una transizione di 1 secondo */
+}
+.fade-in-btn {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+    /* diventa visibile */
+    transition: opacity 0.6s ease, transform 1s ease !important;
+}
+
+
+.heading-style {
+    filter: blur(2px); /* Aggiungi sfocatura quando l'elemento diventa visibile */
+    opacity: 0;
+    transition: opacity 0.5s;
     font-size: clamp(40px, 7vw, var(--f-heading-size));
     font-weight: 500;
 
@@ -63,18 +124,22 @@ export default {
     }
 }
 
-
 .p-style {
+    filter: blur(2px); /* Aggiungi sfocatura quando l'elemento diventa visibile */
+    transform: translateX(-20px);
+    opacity: 0;
+    transition: opacity 0.5s 0.1s, transform 0.5s 0.1s;
     line-height: 28px;
     font-size: 20px;
+
 }
 
-
 .my-btn {
+    transform: translateX(-20px);
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
     color: #E98E01;
     border: 3px solid #E98E01;
-
-
 
     &:hover {
         transition: all 0.5;
@@ -125,23 +190,19 @@ export default {
         gap: 1.7rem;
 
     }
-
-
-
 }
 
 @media screen and (min-width: 768px) {
 
-    .hero-img{
+    .hero-img {
         max-width: 430px;
     }
 
 
 }
-@media screen and (min-width: 992px) {
 
+@media screen and (min-width: 992px) {}
 
-}
 @media screen and (min-width: 1200px) {
 
     .hero-section {
