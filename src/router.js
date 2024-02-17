@@ -2,10 +2,13 @@ import { createRouter, createWebHistory } from "vue-router";
 
 // importazione componenti singole pagine
 import Home from "./pages/Home.vue";
+import Contacts from './pages/Contacts.vue';
+import Restaurants from './pages/Restaurants.vue';
 import Profile from "./pages/dashboard/Profile.vue";
 import Restaurant from "./pages/dashboard/Restaurant.vue";
 import Orders from "./pages/dashboard/Orders.vue";
 import Stats from "./pages/dashboard/Stats.vue";
+
 
 // ... import di altri componenti
 
@@ -15,6 +18,16 @@ const routes = [
         path: "/", // uri da scrivere nel browser
         name: "home", // nome della rotta da usare per creare un link
         component: Home // componente che ritorna l'html della pagina
+    },
+    {
+        path: "/restaurants", // uri da scrivere nel browser
+        name: "restaurants", // nome della rotta da usare per creare un link
+        component: Restaurants // componente che ritorna l'html della pagina
+    },
+    {
+        path: "/contacts", // uri da scrivere nel browser
+        name: "contacts", // nome della rotta da usare per creare un link
+        component: Contacts // componente che ritorna l'html della pagina
     },
     {
         path: "/dashboard/profile", // uri da scrivere nel browser
@@ -43,7 +56,8 @@ const router = createRouter({
     // Serve ad indicare come gestire l'url al cambio pagina
     history: createWebHistory(),
     // passiamo l'array delle rotte
-    routes
+    routes,
+    linkActiveClass : 'active-link'
 });
 
 // esportiamo l'istanta router per poterla usare dentro main.js

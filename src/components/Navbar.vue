@@ -12,7 +12,7 @@ export default {
     data() {
         return {
             cartVisible: null,
-            cartItems:[]
+            cartItems: []
         }
     },
     methods: {
@@ -25,6 +25,7 @@ export default {
                 this.cartVisible = false
             }
         },
+
 
     },
     mounted() {
@@ -46,13 +47,14 @@ export default {
             </div>
             <div class="pages-links d-none d-md-block">
                 <router-link to="/">Home</router-link>
-                <router-link to="/">Ristoranti</router-link>
-                <router-link to="/">Contatti</router-link>
+                <router-link to="restaurants">Ristoranti</router-link>
+                <router-link to="contacts">Contatti</router-link>
             </div>
             <div class="my-nav-links ">
                 <div class="my-nav-link">
                     <div class="cart" ref="cartRef">
-                        <i :style="{color: cartVisible ? 'var(--clr-primary)' : 'var(--clr-bg-body)'}" @click="toggleCart()" class="fa-solid fa-cart-shopping cart-icon"></i>
+                        <i :style="{ color: cartVisible ? 'var(--clr-primary)' : 'var(--clr-bg-body)' }"
+                            @click="toggleCart()" class="fa-solid fa-cart-shopping cart-icon"></i>
                         <Cart :openMenu="cartVisible" :items="cartItems"></Cart>
                     </div>
 
@@ -93,8 +95,6 @@ export default {
     padding: 20px;
     display: flex;
     align-items: center;
-    /*     gap: 100px;
- */
     font-size: 20px;
 
     .hamburger-menu {
@@ -121,24 +121,25 @@ export default {
             font-weight: 100;
             font-family: 'Borel', cursive;
             transform: translateY(30%);
-
         }
     }
 
     .pages-links {
         flex-grow: 1;
         text-align: center;
-
     }
 
     .pages-links * {
+        padding-bottom: 4px;
         text-align: center;
         vertical-align: -webkit-baseline-middle;
-        padding-right: 30px;
         font-weight: 500;
         color: var(--clr-bg-body);
         text-decoration: none;
+    }
 
+    .active-link {
+        border-bottom: 2px solid black;
     }
 
 
@@ -149,8 +150,6 @@ export default {
         flex-grow: 0;
         margin-left: auto;
 
-        /*         padding-right: 50px;
- */
         .my-nav-link {
 
             vertical-align: -webkit-baseline-middle;
@@ -183,9 +182,6 @@ export default {
 .cart {
     position: relative;
 }
-
-
-
 
 
 
@@ -226,7 +222,7 @@ export default {
 
 
     .my-nav .pages-links a {
-        margin-right: 10px
+        margin-right: 40px
     }
 
     .pages-links a:nth-child(1) {
@@ -237,7 +233,7 @@ export default {
 
 @media screen and (min-width: 992px) {
     .my-nav .pages-links a {
-        margin-right: 20px
+        margin-right: 50px
     }
 
     .imgbg {

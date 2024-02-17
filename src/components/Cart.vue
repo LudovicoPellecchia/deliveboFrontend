@@ -66,7 +66,7 @@ export default {
 
 .cart-wrapper {
     z-index: 4;
-    height: 40vh;
+    max-height: 40vh;
     width: 30vh;
     position: absolute;
     top: 100%;
