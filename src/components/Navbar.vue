@@ -1,17 +1,36 @@
 <script>
 import HamburgerMenu from './micro-component/HamburgerMenu.vue';
+import Cart from './Cart.vue';
+
 
 export default {
     components: {
-        HamburgerMenu
+        HamburgerMenu,
+        Cart
 
     },
     data() {
-        return {}
+        return {
+            cartVisible: null,
+            cartItems:[]
+        }
     },
     methods: {
+        toggleCart() {
+            this.cartVisible = !this.cartVisible
+        },
+        closeMenu(e) {
+            if (!this.$refs.cartRef.contains(e.target)) {
+
+                this.cartVisible = false
+            }
+        },
 
     },
+    mounted() {
+        document.addEventListener('click', this.closeMenu)
+
+    }
 }
 </script>
 
@@ -32,10 +51,14 @@ export default {
             </div>
             <div class="my-nav-links ">
                 <div class="my-nav-link">
-                    <a href=""><i class="fa-solid fa-cart-shopping cart-icon"></i></a>
+                    <div class="cart" ref="cartRef">
+                        <i :style="{color: cartVisible ? 'var(--clr-primary)' : 'var(--clr-bg-body)'}" @click="toggleCart()" class="fa-solid fa-cart-shopping cart-icon"></i>
+                        <Cart :openMenu="cartVisible" :items="cartItems"></Cart>
+                    </div>
+
                 </div>
                 <div class="my-nav-link d-none d-md-block d-lg-none">
-                    <a href=""><i class="fa-regular fa-user"></i></a>
+                    <i class="fa-regular fa-user"></i>
                 </div>
                 <div class="my-nav-link d-none d-lg-block">
                     <a href="">Registrati</a>
@@ -136,38 +159,40 @@ export default {
 
             .cart-icon {
                 color: var(--clr-bg-body);
-
             }
 
             a {
+                vertical-align: -webkit-baseline-middle;
+            }
+
+            a,
+            i {
                 margin-right: 20px;
                 color: var(--clr-bg-body);
                 text-decoration: none;
-                vertical-align: -webkit-baseline-middle;
+            }
+
+            i {
+                cursor: pointer;
             }
 
         }
     }
 }
 
-/* @media screen and (max-width: 1526px) {
-    .pages-links a:nth-child(3){
-        color: white;
-    }
+.cart {
+    position: relative;
 }
-@media screen and (max-width: 1195px) {
-    .pages-links a:nth-child(2){
-        color: white;
-    }
-}
-@media screen and (max-width: 1060px) {
-    .pages-links a:nth-child(1){
-        color: white;
-    }
-} */
+
+
+
+
+
+
 
 
 @media screen and (max-width: 576px) {
+
 
     .my-nav .logo .logo-title {
         display: block;

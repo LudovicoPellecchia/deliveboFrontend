@@ -86,7 +86,14 @@ export default {
 }
 
 .my-btn {
+    padding: 15px 30px;
+    font-weight: 400;
     display: inline-block;
-    border: 3px solid black;
+    border: 2px solid #333333;
+
+    &:hover{
+        background-color: #333333;
+        color: white;
+    }
 }
 </style>
