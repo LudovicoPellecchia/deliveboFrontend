@@ -21,7 +21,7 @@ export default {
                 <div class="col-12 col-sm-10 col-lg-6">
                     <div class="cta-card">
                         <div class="card-wrapper">
-                            <img src="../assets/man-chef-cooking-asian-chicken-cafe-kitchen.jpg" alt="">
+                            <img src="../../assets/man-chef-cooking-asian-chicken-cafe-kitchen.jpg" alt="">
                         </div>
                     </div>
                 </div>

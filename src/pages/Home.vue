@@ -1,8 +1,8 @@
 <script>
-import HeroSection from '../components/HeroSection.vue';
-import Categories from '../components/Categories.vue';
-import Offers from '../components/Offers.vue';
-import CTA from '../components/CTA.vue';
+import HeroSection from '../components/Home/HeroSection.vue';
+import Categories from '../components/Home/Categories.vue';
+import Offers from '../components/Home/Offers.vue';
+import CTA from '../components/Home/CTA.vue';
 import Footer from '../components/Footer.vue';
 
 export default {

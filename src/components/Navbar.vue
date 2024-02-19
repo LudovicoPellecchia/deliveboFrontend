@@ -1,6 +1,6 @@
 <script>
 import HamburgerMenu from './micro-component/HamburgerMenu.vue';
-import Cart from './Cart.vue';
+import Cart from './Home/Cart.vue';
 
 
 export default {
