@@ -16,8 +16,8 @@ export default {
 <template>
     <div class="offers-section">
         <div class="bg-imgs-wrapper">
-            <img class="basil-bg" src="../assets/basil-img.png" alt="">
-            <img class="parsley-bg" src="../assets/parsley-img.png" alt="">
+            <img class="basil-bg" src="../../assets/basil-img.png" alt="">
+            <img class="parsley-bg" src="../../assets/parsley-img.png" alt="">
         </div>
         <div class="container">
             <div class="row justify-content-center">
