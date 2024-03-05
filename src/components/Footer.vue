@@ -20,7 +20,7 @@ export default {
                 <img src="../assets/logo.png " alt="">
                 <div class="logo-title">Delichoose</div>
             </div>
-            <div class="row row-cols-1 row-cols-md-3">
+            <div class="row row-cols-1 row-cols-md-3 gy-4">
                 <div class="col">
                     <div class="footer-section">
                         <div class="footer-contacts">
@@ -95,13 +95,14 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
     .footer-sct-title {
         font-size: 20px;
         font-weight: bold;
         color: white;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
 
 
     }

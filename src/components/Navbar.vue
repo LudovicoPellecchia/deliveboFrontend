@@ -63,7 +63,7 @@ export default {
                     <i class="fa-regular fa-user"></i>
                 </div>
                 <div class="my-nav-link d-none d-lg-block">
-                    <a href="">Registrati</a>
+                    <a href="http://127.0.0.1:8000/register">Registrati</a>
                 </div>
                 <div class="my-nav-link d-none d-lg-block">
                     <a href="">Login</a>
@@ -92,7 +92,7 @@ export default {
 }
 
 .my-nav {
-    padding: 20px;
+    padding: 10px;
     display: flex;
     align-items: center;
     font-size: 20px;
