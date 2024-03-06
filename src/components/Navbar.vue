@@ -42,10 +42,10 @@ export default {
         </div>
         <div class="my-nav container-fluid">
             <div class="logo">
-                <img src="../assets/logo.png " alt="">
+                <router-link to="/"><img src="../assets/logo.png " alt=""></router-link>
                 <div class="logo-title">Delichoose</div>
             </div>
-            <div class="pages-links d-none d-md-block">
+            <div class="pages-links d-none d-lg-block">
                 <router-link to="/">Home</router-link>
                 <router-link to="restaurants">Ristoranti</router-link>
                 <router-link to="contacts">Contatti</router-link>
@@ -59,16 +59,13 @@ export default {
                     </div>
 
                 </div>
-                <div class="my-nav-link d-none d-md-block d-lg-none">
-                    <i class="fa-regular fa-user"></i>
-                </div>
                 <div class="my-nav-link d-none d-lg-block">
                     <a href="http://127.0.0.1:8000/register">Registrati</a>
                 </div>
                 <div class="my-nav-link d-none d-lg-block">
                     <a href="">Login</a>
                 </div>
-                <div class="hamburger-menu d-block d-md-none ">
+                <div class="hamburger-menu d-block d-lg-none ">
                     <HamburgerMenu></HamburgerMenu>
                 </div>
             </div>
@@ -110,6 +107,9 @@ export default {
         flex-grow: 0;
         margin-right: 15px;
 
+        .active-link {
+            border: none;
+        }
 
         img {
             width: 85px;
@@ -187,7 +187,7 @@ export default {
 
 
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
 
 
     .my-nav .logo .logo-title {
@@ -195,8 +195,8 @@ export default {
     }
 
     .imgbg {
-        min-width: 120px;
-        max-width: 125px;
+        min-width: 10%;
+        max-width: 117px;
         filter: drop-shadow(0 0 0.2rem rgba(0, 0, 0, 0.8));
 
 
@@ -266,8 +266,7 @@ export default {
 
     .imgbg {
         max-width: 1010px;
-        width: 56%;
-
+        width: 57.2%;
     }
 
     .pages-links a:nth-child(1) {

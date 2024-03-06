@@ -30,11 +30,11 @@ export default {
         this.observer = new IntersectionObserver(this.onIntersect, {
             root: null, // il viewport
             threshold: 0.5, // percentuale di visibilità richiesta
-            rootMargin: "20px", // margine aggiuntivo dal bordo del viewport
+            rootMargin: "80px", // margine aggiuntivo dal bordo del viewport
         });
 /*         this.observer.observe(this.$refs.titleRef);
         this.observer.observe(this.$refs.heroBtn); */
-        this.observer.observe(this.$refs.heroPar); // osserva il titolo
+        this.observer.observe(this.$refs.heroSect); // osserva il titolo
     },
     beforeDestroy() {
         this.observer.disconnect(); // disconnetti l'observer
@@ -43,7 +43,7 @@ export default {
 </script>
 
 <template>
-    <div class="container hero-section ">
+    <div ref="heroSect" class="container hero-section ">
         <div class="row">
             <div class="col-12 col-lg-6">
                 <div class="col-12 col-md-8 col-lg-12 ">

@@ -1,10 +1,30 @@
 @import "bootstrap";
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 
-:root{
-    --clr-primary : #E98E01;
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+:root {
+    --clr-primary: #E98E01;
     --clr-bg-body: #FFF5F1;
-    --clr-bg-section: #F1B14E; 
+    --clr-bg-section: #F1B14E;
     --clr-bg-footer: #333333;
 
     --f-heading-size: 60px;
@@ -90,12 +110,12 @@ select {
 }
 
 body {
-    font-family: 'Outfit', sans-serif;    
+    font-family: 'Outfit', sans-serif;
     background-color: var(--clr-bg-body);
 }
 
 
-.my-btn{
+.my-btn {
     cursor: pointer;
     font-size: 20px;
     font-weight: 600;
