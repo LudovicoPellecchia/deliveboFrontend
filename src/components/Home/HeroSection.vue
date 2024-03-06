@@ -154,7 +154,7 @@ export default {
     img {
         width: 100%;
         filter: drop-shadow(0 0 0.3rem rgb(0, 0, 0));
-        margin-top: -103px;
+        margin-top: -80px;
     }
 }
 

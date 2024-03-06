@@ -1,12 +1,14 @@
 <script>
 import HamburgerMenu from './micro-component/HamburgerMenu.vue';
 import Cart from './Home/Cart.vue';
+import DropDownMenu from './DropDownMenu.vue'
 
 
 export default {
     components: {
         HamburgerMenu,
-        Cart
+        Cart,
+        DropDownMenu
 
     },
     data() {
@@ -47,8 +49,8 @@ export default {
             </div>
             <div class="pages-links d-none d-lg-block">
                 <router-link to="/">Home</router-link>
-                <router-link to="restaurants">Ristoranti</router-link>
-                <router-link to="contacts">Contatti</router-link>
+                <router-link to="restaurants">Restaurants</router-link>
+                <router-link to="contacts">Contacts</router-link>
             </div>
             <div class="my-nav-links ">
                 <div class="my-nav-link">
@@ -66,13 +68,14 @@ export default {
                     <a href="">Login</a>
                 </div>
                 <div class="hamburger-menu d-block d-lg-none ">
-                    <HamburgerMenu></HamburgerMenu>
+                    <DropDownMenu></DropDownMenu>
                 </div>
             </div>
 
         </div>
 
     </header>
+
 </template>
 
 <style lang="scss" scoped>

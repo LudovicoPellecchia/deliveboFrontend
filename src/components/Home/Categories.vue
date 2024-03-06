@@ -121,11 +121,6 @@ export default {
 
 
             },
-
-            on: {
-                init: (swiper) => console.log(swiper),
-                slideChange: () => console.log('slide change')
-            }
         });
     },
 }

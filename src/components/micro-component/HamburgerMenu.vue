@@ -1,25 +1,26 @@
 <script>
 
 export default {
+    props:{
+        isOpen: Boolean,
+        toggleMenu: Function
+    },
     components: {
 
     },
     data() {
         return {
-            isOpen: false
         }
     },
     methods: {
-        toggleMenu() {
-            this.isOpen = !this.isOpen
-        }
+
     },
 }
 </script>
 
 <template>
     <div class="menu">
-        <div @click="toggleMenu()">
+        <div @click="toggleMenu">
             <span :class="{ 'openmenu': isOpen }" class="line-1"></span>
             <span :class="{ 'openmenu': isOpen }" class="line-2"></span>
             <span :class="{ 'openmenu': isOpen }" class="line-3"></span>
@@ -29,6 +30,8 @@ export default {
 
 <style lang="scss" scoped>
 .menu {
+    position: relative;
+    z-index: 13;
     align-self: center;
     cursor: pointer;
 
