@@ -56,7 +56,7 @@ export default {
 
 /* Rimuovi la transizione quando il menu non è visibile */
 .drop-down-menu:not(.open-menu) {
-    transition: width 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 1s ease;
+    transition: width 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.5s ease;
 }
 
 
